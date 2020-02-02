@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Play Audio</title>
+	<script type="text/javascript" src="playAudio.js"></script>
+</head>
+<body>
+
+	<div style="width: 100%; text-align: center;">
+		<h2>Audio Antrian</h2>
+		<p>Maksimal 30 nomor antrian dan 9 loket</p>
+		<hr>
+		<p>
+			<input type="number" name="nomor_antrian" id="nomor_antrian" placeholder="Nomor Antrian..">
+		</p>
+		<p>
+			<input type="number" name="nomor_loket" id="nomor_loket" placeholder="Nomor Loket..">
+		</p>
+		<br>
+		<button onclick="submit()">Panggil Nomor urut antrian</button>
+	</div>
+
+	<script type="text/javascript">
+		function submit(){
+			const nomor_antrian =document.getElementById('nomor_antrian').value;
+			const nomor_loket =document.getElementById('nomor_loket').value;
+
+			playAudioAntrian(nomor_antrian, nomor_loket);
+			return false;
+		}
+	</script>
+</body>
+</html>
